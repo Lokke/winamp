@@ -3,22 +3,22 @@
 
 ## About
 
-Winamp is a multimedia player launched in 1997, iconic for its flexibility and wide compatibility with audio formats. Originally developed by Nullsoft, it gained massive popularity with still millions of users. Its development slowed down, but now, its source code was opened to the community, allowing developers to improve and modernize the player to meet current user needs.
+Winamp is a multimedia player launched in 1997, iconic for its flexibility and wide compatibility with audio formats. Originally developed by Nullsoft, it gained massive popularity, with millions of users still using it. Its development slowed down, but now, its source code has been opened to the community, allowing developers to improve and modernize the player to meet current user needs.
 
 It really whips the llama's ass.
 
 ## Usage
 
-Building of the Winamp desktop client is currently based around Visual Studio 2019 (VS2019) and Intel IPP libs (You need to use exactly v6.1.1.035). There are different options of how to build Winamp:
+The Winamp desktop client is currently built using Visual Studio 2019 (VS2019) and Intel IPP libraries (you must use exactly v6.1.1.035). There are different options for building Winamp:
 
-1. Use the `build_winampAll_2019.cmd` script file that makes 4 versions x86/x64 (Debug and Release). In this case, Visual Studio IDE is not required.
+1. Use the `build_winampAll_2019.cmd` script file that creates 4 versions: x86/x64 (Debug and Release). In this case, Visual Studio IDE is not required.
 2. Use the `winampAll_2019.sln` file to build and debug in Visual Studio IDE.
 
 ### Dependencies
 
 #### libdiscid
 
-We take libdiscid from https://github.com/metabrainz/libdiscid/tree/v0.6.2, copy it in /Src/external_dependencies/libdiscid-0.6.2/
+We take libdiscid from https://github.com/metabrainz/libdiscid/tree/v0.6.2 and copy it into /Src/external_dependencies/libdiscid-0.6.2/
 
 #### libvpx
 
@@ -32,7 +32,7 @@ Run `unpack_libmpg123.cmd` to unpack and process the DLLs.
 
 #### OpenSSL
 
-You need to use `openssl-1.0.1u`. For that, you need to build a static version of these libs.
+You need to use `openssl-1.0.1u`. To do this, you need to build a static version of these libraries.
 Run `build_vs_2019_openssl_x86.cmd` and `build_vs_2019_openssl_64.cmd`.
 
 To build OpenSSL, you need to install:
@@ -43,12 +43,13 @@ To build OpenSSL, you need to install:
 
 #### DirectX 9 SDK
 
-We take DirectX 9 SDK (June 2010) from Microsoft, modify it, and pack it to archive.
+We take DirectX 9 SDK (June 2010) from Microsoft, modify it, and pack it into an archive.
 Run `unpack_microsoft_directx_sdk_2010.cmd` to unpack it.
 
 #### Microsoft ATLMFC lib fix
 
-In file `C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\atlmfc\include\atltransactionmanager.h`
+In the file 
+`C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314\atlmfc\include\atltransactionmanager.h`
 
 Go to line 427 and change from:
 
@@ -70,7 +71,7 @@ Run `unpack_intel_ipp_6.1.1.035.cmd` to unpack it.
 
 ### Build Tools
 
-Several external build tools are required to build Winamp. These tools are not bundled directly into the repository to comply with their respective licenses. You will need to download them separately from the following links:
+Several external build tools are required for building Winamp. These tools are not bundled directly with the repository in order to comply with their respective licenses. You will need to download them separately from the following links:
 
 - **7-Zip Portable**: Download from [https://www.7-zip.org/](https://www.7-zip.org/)  
   License: GNU LGPL
